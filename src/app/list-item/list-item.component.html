@@ -1,0 +1,14 @@
+<div *ngIf="!editing">
+  {{ todo.text }}
+  <button (click)="editing = true">Edit</button>
+  <button (click)="delete()">Delete</button>
+</div>
+<div *ngIf="editing">
+  <!-- <input type="text"
+        [value]="todo.text"
+        (input)="todo.text = it.value"
+        (change)="editing = false" #it> -->
+  <input type="text"
+        [(ngModel)]="todo.text"
+        (change)="editing = false">
+</div>
