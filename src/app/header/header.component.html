@@ -5,23 +5,38 @@
   </button>
 </mat-toolbar>
 <mat-menu #menu="matMenu">
-  <button mat-menu-item [style.color]="appService.selectedMenu == 'home' ? 'red' : 'black'" routerLink="/">
+  <button mat-menu-item
+    routerLinkActive="active"
+    [routerLinkActiveOptions]="{exact: true}"
+    routerLink="/">
     <mat-icon>home</mat-icon>
     <span>Home</span>
   </button>
-  <button mat-menu-item [style.color]="appService.selectedMenu == 'skills' ? 'red' : 'black'" [routerLink]="'/skills'">
+  <button
+    mat-menu-item
+    routerLinkActive="active"
+    [routerLink]="'/skills'">
     <mat-icon>home</mat-icon>
     <span>Skills</span>
   </button>
-  <button mat-menu-item [style.color]="appService.selectedMenu == 'experiences' ? 'red' : 'black'" routerLink="/experiences">
+  <button
+    mat-menu-item
+    routerLinkActive="active"
+    routerLink="/experiences">
     <mat-icon>home</mat-icon>
     <span>Experiences</span>
   </button>
-  <button mat-menu-item [style.color]="appService.selectedMenu == 'contact' ? 'red' : 'black'" routerLink="/contact">
+  <button
+    mat-menu-item
+    routerLinkActive="active"
+    routerLink="/contact">
     <mat-icon>home</mat-icon>
     <span>Contact</span>
   </button>
-  <button mat-menu-item [style.color]="appService.selectedMenu == 'todos' ? 'red' : 'black'" routerLink="/todos">
+  <button
+    mat-menu-item
+    routerLinkActive="active"
+    routerLink="/todos">
       <mat-icon>home</mat-icon>
       <span>Todos</span>
   </button>

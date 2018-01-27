@@ -8,7 +8,7 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-  constructor(public appService: AppService, private route: ActivatedRoute) {}
+  constructor(public appService: AppService, public route: ActivatedRoute) {}
 
   ngOnInit() {
     this.route.url.subscribe(d => console.log('d : ', d[0].path));
@@ -16,5 +16,6 @@ export class HeaderComponent implements OnInit {
 
   public selectMenu(menu): void {
     this.appService.selectedMenu = menu;
+    console.log('coucou : ', this.route.snapshot.url);
   }
 }
