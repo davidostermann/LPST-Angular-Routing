@@ -8,3 +8,7 @@ html, body {
 .active {
   color: red;
 }
+
+a {
+  text-decoration: none;
+}
