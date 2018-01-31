@@ -11,7 +11,9 @@ export class HeaderComponent implements OnInit {
   constructor(public appService: AppService, public route: ActivatedRoute) {}
 
   ngOnInit() {
-    this.route.url.subscribe(d => console.log('d : ', d[0].path));
+    this.route.url.subscribe(d =>
+      console.log('FROM HEADER : ', d.length && d[0].path)
+    );
   }
 
   public selectMenu(menu): void {
